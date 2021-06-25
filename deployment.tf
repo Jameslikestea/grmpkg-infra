@@ -14,5 +14,5 @@ resource "aws_instance" "public1" {
 
 resource "aws_key_pair" "london-region-keypair" {
   key_name   = "london-region-keypair"
-  public_key = "${file(var.PUBLIC_KEY_PATH)}"
+  public_key = file(var.PUBLIC_KEY_PATH)
 }
